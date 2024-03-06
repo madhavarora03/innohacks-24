@@ -6,6 +6,14 @@ import {
 } from './auth.controller';
 import { healthCheck } from './healthcheck.controller';
 import {
+  addOrderItems,
+  getMyOrders,
+  getOrderById,
+  getOrders,
+  updateOrderToDelivered,
+  updateOrderToPaid,
+} from './order.controller';
+import {
   createProduct,
   deleteProduct,
   getProductById,
@@ -29,3 +37,12 @@ export {
 };
 
 export { createReview };
+
+export {
+  addOrderItems,
+  getMyOrders,
+  getOrderById,
+  getOrders,
+  updateOrderToDelivered,
+  updateOrderToPaid,
+};

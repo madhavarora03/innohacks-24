@@ -1,4 +1,5 @@
 import { AuthenticatedRequest } from './auth.interface';
+import { OrderDocument, OrderModel, OrderItem } from './order.interface';
 import {
   ProductDocument,
   ProductMethods,
@@ -14,3 +15,5 @@ export { UserDocument, UserMethods, UserModel };
 export { ProductDocument, ProductMethods, ProductModel };
 
 export { ReviewDocument, ReviewMethods, ReviewModel };
+
+export { OrderDocument, OrderModel, OrderItem };
