@@ -1,12 +1,14 @@
-import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	server: {
-		proxy: {
-			'/api': 'http://localhost:3000/api/v1',
-		},
-	},
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://innohacks-backend.devrahulsingh.tech',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api/v1'),
+      },
+    },
+  },
 });
