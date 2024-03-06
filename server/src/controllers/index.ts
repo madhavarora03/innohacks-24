@@ -21,7 +21,16 @@ import {
   getTopProducts,
   updateProduct,
 } from './product.controller';
-import { createReview } from './review.controller';
+import { createReview, getProductReviews } from './review.controller';
+
+import {
+  deleteUser,
+  getUserProfile,
+  getUsers,
+  updateUserProfile,
+  updateUser,
+  getUserById
+} from './user.controller';
 
 export { loginUser, logoutUser, refreshAccessToken, registerUser };
 
@@ -36,7 +45,7 @@ export {
   updateProduct,
 };
 
-export { createReview };
+export { createReview, getProductReviews };
 
 export {
   addOrderItems,
@@ -46,3 +55,5 @@ export {
   updateOrderToDelivered,
   updateOrderToPaid,
 };
+
+export { deleteUser, getUserProfile, getUsers, updateUserProfile, updateUser, getUserById };

@@ -1,7 +1,4 @@
-import {
-  createReview,
-  getProductReviews,
-} from '@/controllers/review.controller';
+import { createReview, getProductReviews } from '@/controllers';
 import { verifyJwt } from '@/middleware';
 import { Router } from 'express';
 
