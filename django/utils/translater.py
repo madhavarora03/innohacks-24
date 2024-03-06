@@ -112,18 +112,23 @@ zu: zulu
 """
 
 def translateIn(text , source , destination):
-    translator = Translator()
-    source_lang = source
-    target_lang = destination
-    # translated_text = translator.translate(text, src=source_lang, dest=target_lang, raise_exception=True)
-    translated_text = translator.translate(text, src=source_lang, dest=target_lang, raise_exception=True)
+    try:
+        translator = Translator()
+        source_lang = 'auto'
+        target_lang = destination
+        translated_text = translator.translate(text, src=source_lang, dest=target_lang)
+   
+    except Exception as e:
+        print(f"Error translating text: {e}")
+        return text
     
     return {
         "text" : translated_text.text,
         "pronunciation" : translated_text.pronunciation,
     }
     
-print(translateIn("Hello how are you ? " , 'en' , 'bn'))
+# print(translateIn("Hello how are you ? " , 'en' , 'bn'))
+
 def getAllTranslationList():
     temp = []
     for code, name in LANGUAGES.items():
