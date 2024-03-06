@@ -1,5 +1,4 @@
 from googletrans import Translator , LANGUAGES
-import httpx
 
 # Supported languages ...
 """
@@ -128,7 +127,7 @@ def translateIn(text , source , destination):
         "pronunciation" : translated_text.pronunciation,
     }
     
-print(translateIn("Hello how are you ? " , 'en' , 'bn'))
+# print(translateIn("Hello how are you ? " , 'en' , 'bn'))
 
 def getAllTranslationList():
     temp = []
