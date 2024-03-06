@@ -9,10 +9,10 @@ import { generateAccessAndRefreshTokens } from '@/utils/generateTokens';
 import jwt, { JwtPayload } from 'jsonwebtoken';
 
 export const registerUser = catchAsync(async (req, res) => {
-  const { username, name, email, password } = req.body;
+  const { name, email, password } = req.body;
 
   const existingUser = await User.findOne({
-    $or: [{ username }, { email }],
+    email,
   });
 
   if (existingUser) {
@@ -20,7 +20,6 @@ export const registerUser = catchAsync(async (req, res) => {
   }
 
   const user = await User.create({
-    username,
     name,
     email,
     password,
@@ -52,13 +51,13 @@ export const registerUser = catchAsync(async (req, res) => {
 });
 
 export const loginUser = catchAsync(async (req, res) => {
-  const { username, email, password } = req.body;
+  const { email, password } = req.body;
 
-  if (!username && !email) {
-    throw new HttpError(400, 'Username or Email is required');
+  if (!email) {
+    throw new HttpError(400, 'Email is required');
   }
 
-  const user = await User.findOne({ $or: [{ username }, { email }] });
+  const user = await User.findOne({ email });
 
   if (!user) {
     throw new HttpError(404, 'User not found');

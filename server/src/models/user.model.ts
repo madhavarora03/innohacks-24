@@ -11,15 +11,6 @@ import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema<UserDocument, UserModel, UserMethods>(
   {
-    username: {
-      type: String,
-      required: true,
-      trim: true,
-      unique: true,
-      minlength: 3,
-      lowercase: true,
-      index: true,
-    },
     name: {
       type: String,
       required: true,

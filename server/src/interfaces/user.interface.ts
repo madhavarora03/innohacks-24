@@ -1,7 +1,6 @@
 import { Document, Model } from 'mongoose';
 
 export interface User {
-  username: string;
   name: string;
   email: string;
   password: string;
