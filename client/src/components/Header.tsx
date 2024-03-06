@@ -45,7 +45,7 @@ function Header() {
                         </div>
                     </button>
                 </Link>
-                <div className="flex gap-2"><SunIcon /><input type="checkbox" className="toggle" checked={theme == 'dim'} onClick={() => dispatch(switchTheme())} /><MoonIcon /></div>
+                <div className="flex gap-2"><SunIcon /><input type="checkbox" className="toggle" checked={theme === 'dim'} onClick={() => dispatch(switchTheme())} /><MoonIcon /></div>
             </div>
         </div>
     );
