@@ -1,5 +1,6 @@
 const sampleProducts = [
 	{
+		id: 1,
 		name: 'Airpods Wireless Bluetooth Headphones',
 		image: 'https://proshop-2otz.onrender.com/images/airpods.jpg',
 		description:
@@ -12,6 +13,7 @@ const sampleProducts = [
 		numReviews: 12,
 	},
 	{
+		id: 2,
 		name: 'iPhone 11 Pro 256GB Memory',
 		image: 'https://proshop-2otz.onrender.com/images/phone.jpg',
 		description:
@@ -24,6 +26,7 @@ const sampleProducts = [
 		numReviews: 8,
 	},
 	{
+		id: 3,
 		name: 'Cannon EOS 80D DSLR Camera',
 		image: 'https://proshop-2otz.onrender.com/images/camera.jpg',
 		description:
@@ -36,6 +39,7 @@ const sampleProducts = [
 		numReviews: 12,
 	},
 	{
+		id: 4,
 		name: 'Sony Playstation 4 Pro White Version',
 		image: 'https://proshop-2otz.onrender.com/images/playstation.jpg',
 		description:
@@ -48,6 +52,7 @@ const sampleProducts = [
 		numReviews: 12,
 	},
 	{
+		id: 5,
 		name: 'Logitech G-Series Gaming Mouse',
 		image: 'https://proshop-2otz.onrender.com/images/mouse.jpg',
 		description:
@@ -60,6 +65,7 @@ const sampleProducts = [
 		numReviews: 10,
 	},
 	{
+		id: 6,
 		name: 'Amazon Echo Dot 3rd Generation',
 		image: 'https://proshop-2otz.onrender.com/images/alexa.jpg',
 		description:
@@ -72,5 +78,12 @@ const sampleProducts = [
 		numReviews: 12,
 	},
 ];
+
+export const BASE_URL = '';
+export const PRODUCTS_URL = '/api/products';
+export const USERS_URL = '/api/users';
+export const ORDERS_URL = '/api/orders';
+export const PAYPAL_URL = '/api/config/paypal';
+export const UPLOAD_URL = '/api/upload';
 
 export default sampleProducts;
