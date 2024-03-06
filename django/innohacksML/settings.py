@@ -14,8 +14,7 @@ SECRET_KEY = 'e-ro*m^z8#=dj^gr8yjjm(#35u)@9i5x!y9x$h&ib%6)+uijgw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.devrahulsingh.tech' , '125.99.184.78', 'innohacks-ml.devrahulsingh.tech' , 'innohacks-ml' , '127.0.0.1']
 
 # Application definition
 

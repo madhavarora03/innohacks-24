@@ -115,13 +115,15 @@ def translateIn(text , source , destination):
     translator = Translator()
     source_lang = source
     target_lang = destination
-    translated_text = translator.translate(text, src=source_lang, dest=target_lang)
+    # translated_text = translator.translate(text, src=source_lang, dest=target_lang, raise_exception=True)
+    translated_text = translator.translate(text, src=source_lang, dest=target_lang, raise_exception=True)
+    
     return {
         "text" : translated_text.text,
         "pronunciation" : translated_text.pronunciation,
     }
     
-# print(translateIn("Hello how are you ? " , 'en' , 'bn'))
+print(translateIn("Hello how are you ? " , 'en' , 'bn'))
 def getAllTranslationList():
     temp = []
     for code, name in LANGUAGES.items():
